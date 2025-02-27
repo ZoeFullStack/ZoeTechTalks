@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem "i18n", "1.14.6"  # i18n 应该放在顶层
 
 group :jekyll_plugins do
+  gem 'jekyll-terser', :git => 'https://github.com/RobertoJBeltran/jekyll-terser.git'
     gem 'jekyll-archives'
     gem 'jekyll-email-protect'
     gem 'jekyll-feed'
@@ -16,7 +18,6 @@ group :jekyll_plugins do
     gem 'jekyll-scholar'
     gem 'jekyll-sitemap'
     gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
@@ -24,14 +25,13 @@ group :jekyll_plugins do
     gem 'classifier-reborn'  # used for content categorization during the build
 end
 
-# Gems for development or external data fetching (outside :jekyll_plugins)
 group :other_plugins do
     gem 'css_parser'
     gem 'feedjira'
     gem 'httparty'
-    gem 'observer'       # used by jekyll-scholar
-    gem 'ostruct'        # used by jekyll-twitter-plugin
-    gem 'terser'         # used by jekyll-terser
-    # gem 'unicode_utils' -- should be already installed by jekyll
-    # gem 'webrick' -- should be already installed by jekyll
+    gem 'terser'  # used by jekyll-terser
+    # gem 'observer'  # should be already installed 
+    # gem 'ostruct'  # should be already installed 
+    # gem 'unicode_utils'  # Jekyll should be already installed 
+    # gem 'webrick'  # Jekyll should be already installed 
 end
